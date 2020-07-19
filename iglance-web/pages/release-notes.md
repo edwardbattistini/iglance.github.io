@@ -6,7 +6,6 @@ show: true
 subtitle: "iGlance is developped by a community of blablabal "
 date: '2020-03-05 11:15:33'
 hero-size: is-medium
-date: '2020-03-05 16:43:18'
 background-colour: is-info
 ---
 ### Version 2.0.9 (2020-06-29)

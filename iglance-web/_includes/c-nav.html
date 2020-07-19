@@ -1,40 +1,40 @@
-<div id="backtop" class="container is-fluid is-paddingless px-4 py-2 is-large" style="background-color:{{page.hero-colour}}" >
-	<nav class="level is-mobile">
-		<!-- Left side -->
-		<div class="level-left">
-			<a href="/" class="level-item">
-				<img src="/assets/img/logo.svg" alt="logo iglance"/>
+<div class="container is-fluid mt-4">
+	<nav id="backtop" class="level is-mobile" style="background-color:{{page.hero-colour}}">
+	<!-- Left side -->
+	<div class="level-left">
+		<a href="/" class="level-item">
+			<img src="/assets/img/logo.svg" alt="logo iglance"/>
+		</a>
+	</div>
+	<div class="level-right pr-1">
+		{% if page.url != '/' %}
+			<a href="/">
+				<button class="level-item button is-text">
+				<span class="icon is-small">
+					<i class="fas fa-home"></i>
+				</span>
+				</button>
 			</a>
-		</div>
-		<div class="level-right pr-1">
-			{% if page.url != '/' %}
-				<a href="/">
-					<button class="level-item button is-text">
+		{% endif %}
+		{% for item in site.data.nav-config.nav-items %}
+			{% if item.url == page.url %}
+				<a href="{{ item.url }}">
+					<button class="level-item button is-primary is-light ">
 					<span class="icon is-small">
-						<i class="fas fa-home"></i>
+						{{ item.title }}
+					</span>
+					</button>
+				</a>
+			{% else %}
+				<a  href="{{ item.url }}">
+					<button class="level-item button is-text ">
+					<span class="icon is-small">
+						{{ item.title }}
 					</span>
 					</button>
 				</a>
 			{% endif %}
-			{% for item in site.data.nav-config.nav-items %}
-				{% if item.url == page.url %}
-					<a href="{{ item.url }}">
-						<button class="level-item button is-primary is-light ">
-						<span class="icon is-small">
-							{{ item.title }}
-						</span>
-						</button>
-					</a>
-				{% else %}
-					<a  href="{{ item.url }}">
-						<button class="level-item button is-text ">
-						<span class="icon is-small">
-							{{ item.title }}
-						</span>
-						</button>
-					</a>
-				{% endif %}
-			{% endfor %}
-		</div>
-	</nav>
+		{% endfor %}
+	</div>
+</nav>
 </div>

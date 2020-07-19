@@ -1,13 +1,12 @@
-<section role="banner" class="hero is-fullheight {{page.background-colour}}">
+<section class="hero is-fullheight {{page.background-colour}}">
 	<div class="hero-body">
-		<div class="columns is-centered">
-			<div id="container" class="column is-8-tablet is-6-desktop pt-0">
-				{% if page.featured-img %}
-				<img class="is-1by1" id="icon" width="128px" src="{{page.featured-img}}" alt="logo"> {% endif %}
-				<h1 class="is-size-1 has-text-left has-text-weight-bold">
-				{{ page.title }}
-				</h1>
-				<p class="subtitle is-size-5 has-text-left">
+		<div class="columns is-6 is-vcentered is-centered">
+			<div class="column is-6">
+				{% if site.app-icon %}
+					<img class="is-1by1" id="icon" width="64px" src="{{site.app-icon}}" alt="logo">
+				{% endif %}
+				<h1 class="is-size-1 has-text-left has-text-weight-bold">{{ page.title }}</h1>
+				<p class="is-size-5 has-text-left pb-4">
 					{{ page.subtitle }}
 				</p>
 				<p class="buttons">
@@ -15,6 +14,20 @@
 					<a href="/release-notes.html"><button class="button is-link is-inverted is-light">Release notes</button></a>
 				</p>
 			</div>
+			{% if page.featured-img and page.featured-img != "" %}
+				<div class="column is-half">
+					<figure class="image is-4by3 ">
+						<img class="ui" src="{{ page.featured-img }}">
+					</figure>
+				</div>
+				<div class="column is-1"></div>
+			{% endif %}
 		</div>
 	</div>
 </section>
+<style>
+	.ui{
+		border-radius: 12px;
+		box-shadow: 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.00807786), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0119221), 0px 100px 80px rgba(0, 0, 0, 0.02);
+	}
+</style>

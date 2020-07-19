@@ -18,6 +18,8 @@ defaults:
 
 theme: jekyll-bulma
 
+app-icon: /assets/img/icon.png
+
 markdown: kramdown
 
 plugins:
