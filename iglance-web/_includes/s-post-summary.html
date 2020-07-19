@@ -1,0 +1,28 @@
+<section id="post-summary" class="section has-background-white-bis container is-fluid">
+	<div class="columns is-centered">
+		<div class="column is-7-tablet is-6-desktop is-6-widescreen is-6-fullhd">
+			<h5 class="is-size-6 label is-uppercase has-text-grey">Summary</h5>
+			<p class="is-size-6">{{ page.summary}}</p>
+		</div>
+	</div>
+	<div class="columns is-centered">
+		<div class="column is-7-tablet is-6-desktop is-6-widescreen is-6-fullhd">
+			<h5 class="is-size-6 label is-uppercase has-text-grey">Role</h5>
+			<p class="is-7"><strong>{{ page.role}}</strong><br>{{ page.tasks}}</p>
+		</div>
+	</div>
+	<div class="columns is-centered">
+		<div class="column is-4-tablet is-3-desktop is-3-widescreen is-3-fullhd">
+			<h5 class="is-size-6 label is-uppercase has-text-grey">Team</h5>
+			<p class="is-7">{{ page.team}}</p>
+		</div>
+		<div class="column is-3-tablet is-3-desktop is-3-widescreen is-3-fullhd">
+			<h5 class="is-size-6 label is-uppercase has-text-grey">Tags</h5>
+			<div class="tags are-normal">
+				{% for tags in page.tags %}
+					<span class="tag is-link is-light">{{ tags }}</span>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>

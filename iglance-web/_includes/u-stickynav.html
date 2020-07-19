@@ -1,0 +1,19 @@
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navscroll");
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (document.body.scrollTop > 128 || document.documentElement.scrollTop > 128) {
+	navbar.style.top = "0px"
+	navbar.style.opacity = 1
+  } else {
+	navbar.style.top = "-64px"
+	  
+  }
+}
+</script>
+

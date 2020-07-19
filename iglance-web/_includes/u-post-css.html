@@ -1,0 +1,70 @@
+<style type="text/css">
+	/*mobile: up to 768px
+tablet: from 769px
+desktop: from 1024px
+widescreen: from 1216px
+fullhd: from 1408px*/
+
+
+@media screen and (min-width: 1024px){
+	.big {
+		margin-left: -30%!important;
+		margin-right: -30% !important;
+	}
+
+}
+
+@media screen and (max-width: 1023px){
+	.big{
+		margin-left: -15% !important;
+		margin-right: -15% !important;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.big {
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+}
+
+
+.iframe-container {
+  overflow: hidden;
+  // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
+  padding-top: 56.25%;
+  position: relative;
+}
+ 
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+
+.ghost{
+	background-color: #fff !important;
+	border: none !important;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
+.sticky {
+  position: fixed;
+  top: -64px;
+  width: 100%;
+  z-index:999;
+  opacity:0;
+  transition: top 0.2s;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+</style>

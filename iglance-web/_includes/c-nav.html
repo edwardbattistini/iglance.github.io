@@ -1,0 +1,42 @@
+<div id="backtop" class="container is-fluid is-paddingless px-2 py-2 is-large" style="background-color:{{page.hero-colour}}" >
+	<nav class="level is-mobile">
+		<!-- Left side -->
+		<div class="level-left">
+			<a href="/" class="level-item">
+				<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M23.0537 14.5641L24.8125 8H31.6082L29.8494 14.5641H40V21.1282H28.0905L26.5515 26.8718H40V33.4359H24.7927L23.0338 40H16.2382L17.997 33.4359H8V26.8718H19.7559L21.2948 21.1282H8V14.5641H23.0537Z" fill="#181818"/>
+				</svg>
+			</a>
+		</div>
+		<div class="level-right pr-1">
+			{% if page.url != '/' %}
+				<a href="/">
+					<button class="level-item button is-text">
+					<span class="icon is-small">
+						<i class="fas fa-home"></i>
+					</span>
+					</button>
+				</a>
+			{% endif %}
+			{% for item in site.data.nav-config.nav-items %}
+				{% if item.url == page.url %}
+					<a href="{{ item.url }}">
+						<button class="level-item button is-primary is-light ">
+						<span class="icon is-small">
+							{{ item.title }}
+						</span>
+						</button>
+					</a>
+				{% else %}
+					<a  href="{{ item.url }}">
+						<button class="level-item button is-text ">
+						<span class="icon is-small">
+							{{ item.title }}
+						</span>
+						</button>
+					</a>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</nav>
+</div>

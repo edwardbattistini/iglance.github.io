@@ -1,0 +1,68 @@
+<div role="form" class="modal" id="myModal">
+	<div id="myBg" onclick="hideModal()" class="modal-background"></div>
+	<div class="modal-card px-4 py-4" style="overflow: visible;">
+		<section id="shad" class="modal-card-body px-6 py-6">
+			<div class="columns is-centered is-vcentered">
+				<div class="column">
+					<div>
+						<form name="contact" method="post" netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true" id="contact">
+							<div class="field">
+								<p class="is-hidden">
+									<label>Don’t fill this out if you are human <input name="bot-field"></label>
+								</p><label class="label">Name</label>
+								<div class="control">
+									<input class="input" type="text" placeholder="Name">
+								</div>
+							</div>
+							<div class="field">
+								<label class="label">Email</label>
+								<div class="control">
+									<input class="input" type="email" placeholder="Your email">
+								</div>
+							</div>
+							<div class="field">
+								<p class="is-hidden">
+									<label>Don’t fill this out if you are human <input name="bot-field"></label>
+								</p><label class="label">Message</label>
+								<div class="control">
+									<textarea class="textarea" placeholder="Textarea"></textarea>
+								</div>
+							</div>
+							<div class="control">
+								<div data-netlify-recaptcha="true"></div><br>
+							</div>
+							<div role="button" id="button" class="control">
+								<button aria-label="Submit" type="submit" class="button is-info">Send message</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+<style>
+	#myBg { 
+		-webkit-backdrop-filter: saturate(1.8) blur(16px);
+		-webkit-font-smoothing: antialiased;
+		background-color: rgba(255, 255, 255, 0.8);
+		box-sizing: content-box;
+		color: rgb(162, 162, 162);
+	}
+  	#shad {
+    box-shadow: 0px 18.6158px 89.8144px rgba(0, 0, 0, 0.0081032), 0px 51px 125px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+  }
+</style>
+<script>
+  function showModal() {
+    var element = document.getElementById("myModal");
+    element.classList.toggle("is-active");
+  }
+
+  function hideModal() {
+    var element = document.getElementById("myModal");
+    element.classList.remove("is-active");
+  }
+</script>

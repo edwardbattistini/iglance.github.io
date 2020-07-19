@@ -1,0 +1,35 @@
+maintenance-mode: false
+showposts: true
+google_analytics: #
+
+
+
+title: Edward Battistini | Product designer | London UK
+email: logindetails@icloud.com
+description: ""
+
+baseurl: ""
+url: ""
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+
+theme: jekyll-bulma
+
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Compress CSS
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Compress HTML (in liquid via layouts/compress.html)
+compress_html:
+  clippings: all

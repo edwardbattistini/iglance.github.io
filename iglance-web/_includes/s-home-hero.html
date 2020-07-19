@@ -1,0 +1,28 @@
+<section role="banner" class="hero 
+	{% if page.hero-size %}
+		{{page.hero-size }}
+	{%else%}
+		is-small
+	{%endif%} 
+	{% if page.hero-colour %}
+		{{page.hero-colour}} 
+	{% elsif post.hero-colour %}
+		{{post.hero-colour}}
+	{% else %} 
+		is-white 
+	{% endif %}">
+	<div class="hero-body">
+		<div class="columns is-centered">
+			<div id="container" class="column is-8-tablet is-6-desktop pt-0">
+				{% if page.featured-img %} 
+					<img class="is-1by1" id="icon" width="128px" src="{{page.featured-img}}" alt="logo"> {% endif %}
+				<h1 class="is-size-1 has-text-left has-text-weight-bold">
+					{{ page.title }}
+				</h1>
+				<p class="subtitle is-size-5 has-text-left">
+					{{ page.subtitle }}
+				</p>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% if site.maintenance-mode == true %}
+  {% include u-maintenance.html %}
+{% else %}
+<html lang="en"> 
+  {% include s-head.html %}
+  <body>
+    {{ content }}
+    {% include u-lazyload.html %}
+  </body>
+	{% include s-footer.html %}
+	{% include u-css.html %}
+</html>
+{% endif %}
+
+
+
+
