@@ -1,0 +1,18 @@
+nav_list_title: Navigation
+nav-items:
+
+# - title: Photos
+#   url: /photos.html
+
+# - title: Contact
+#   url: /contact.html
+
+- title: <i class="fab fa-github"></i>
+  url: #
+  
+- title: <i class="fab fa-twitter"></i>
+  url: https://twitter.com/
+
+- title: <i class="fas fa-share-square"></i>
+  url: #
+

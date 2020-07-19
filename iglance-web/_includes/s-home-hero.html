@@ -1,26 +1,18 @@
-<section role="banner" class="hero 
-	{% if page.hero-size %}
-		{{page.hero-size }}
-	{%else%}
-		is-small
-	{%endif%} 
-	{% if page.hero-colour %}
-		{{page.hero-colour}} 
-	{% elsif post.hero-colour %}
-		{{post.hero-colour}}
-	{% else %} 
-		is-white 
-	{% endif %}">
+<section role="banner" class="hero is-fullheight {{page.background-colour}}">
 	<div class="hero-body">
 		<div class="columns is-centered">
 			<div id="container" class="column is-8-tablet is-6-desktop pt-0">
-				{% if page.featured-img %} 
-					<img class="is-1by1" id="icon" width="128px" src="{{page.featured-img}}" alt="logo"> {% endif %}
+				{% if page.featured-img %}
+				<img class="is-1by1" id="icon" width="128px" src="{{page.featured-img}}" alt="logo"> {% endif %}
 				<h1 class="is-size-1 has-text-left has-text-weight-bold">
-					{{ page.title }}
+				{{ page.title }}
 				</h1>
 				<p class="subtitle is-size-5 has-text-left">
 					{{ page.subtitle }}
+				</p>
+				<p class="buttons">
+					<a href="#"><button class="button is-info mr-4">Download now</button></a>
+					<a href="/release-notes.html"><button class="button is-link is-inverted is-light">Release notes</button></a>
 				</p>
 			</div>
 		</div>
