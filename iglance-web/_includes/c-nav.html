@@ -1,11 +1,16 @@
 <div class="container is-fluid mt-4">
 	<nav id="backtop" class="level is-mobile" style="background-color:{{page.hero-colour}}">
-	<!-- Left side -->
-	<div class="level-left">
-		<a href="/" class="level-item">
-			<img src="/assets/img/logo.svg" alt="logo iglance"/>
-		</a>
-	</div>
+	{% if page.url == '/' %}
+	<div class="level-left"></div>
+		<!-- nope -->
+		{% else %}
+		<!-- Left side -->
+		<div class="level-left">
+			<a href="/" class="level-item">
+				<img src="/assets/img/logo.svg" alt="logo iglance"/>
+			</a>
+		</div>
+	{% endif %}
 	<div class="level-right pr-1">
 		{% if page.url != '/' %}
 			<a href="/">

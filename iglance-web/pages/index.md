@@ -8,5 +8,6 @@ featured-img: ""
 date: '2020-03-05 16:43:18'
 background-colour: is-white
 ---
+{% include c-nav.html %}
 {% include s-home-hero.html %}
 
