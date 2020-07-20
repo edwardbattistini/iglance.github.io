@@ -5,4 +5,6 @@
 - run `bundle install`
 - run `bundle exec jekyll serve`
 
-If you are having runing this please check [jekyll documentation](https://jekyllrb.com/docs/)
+If you are having running this please check [jekyll documentation](https://jekyllrb.com/docs/)
+
+Current preview branch on [Netlify](https://sad-ride-62f38a.netlify.app)
